@@ -23,5 +23,10 @@ app.get ('/about', (req, res) => {
     res.render('about');
 });
 
+app.get ('*', (req, res) => {
+    res.render('404');
+});
+
+
 app.listen(5001, ()=> console.log('Server is listening at http://localhost:5001...'));
 
