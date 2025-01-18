@@ -1,5 +1,6 @@
 import express from 'express';
 import handlebars from 'express-handlebars';
+import homeController from './controllers/home-controller.js';
 
 const app = express();
 
@@ -12,16 +13,7 @@ app.set('views', './src/views');  //указваме къде се намира 
 //app.use(express.static('src/public')); //статичните файлове да са достъпни
 app.use('/static', express.static('src/public')); //ако започва с /static – тогава го търси в src/public
 
-
-app.get ('/', (req, res) => {
-    //res.send('It works!');
-    //res.render('home', {layout: false});
-    res.render('home');
-});
-
-app.get ('/about', (req, res) => {
-    res.render('about');
-});
+app.use(homeController); 
 
 app.get ('*', (req, res) => {
     res.render('404');
