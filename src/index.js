@@ -15,7 +15,8 @@ app.use('/static', express.static('src/public')); //ако започва с /st
 
 app.get ('/', (req, res) => {
     //res.send('It works!');
-    res.render('home', {layout: false});
+    //res.render('home', {layout: false});
+    res.render('home');
 });
 
 app.listen(5001, ()=> console.log('Server is listening at http://localhost:5001...'));
