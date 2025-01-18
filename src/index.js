@@ -1,11 +1,15 @@
 import express from 'express';
 import handlebars from 'express-handlebars';
 import routes from './routes.js';  
+import showRatingHelper from './helpers/rating-helper.js';
 
 const app = express();
 
 app.engine('hbs', handlebars.engine({
     extname: 'hbs',   //задаваме да може да обработва с разширение hbs
+    helpers: {
+        showRating: showRatingHelper,
+    }
 }));
 app.set('view engine', 'hbs');    //hbs ще е дефолтния енжин
 app.set('views', './src/views');  //указваме къде се намира папката views

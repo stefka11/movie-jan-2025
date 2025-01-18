@@ -20,7 +20,8 @@ movieController.get('/:movieId/details', (req, res) => {
     //console.log(movieId);
     //TODO:  да отворим файла с филмите и да вземем детайлите на филма с намереното id
     const movie = movieService.findOne(movieId);
-    console.log(movie);
+    //console.log(movie);
+    //movie.rating
     
     res.render('details', { movie });
 });

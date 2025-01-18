@@ -8,7 +8,7 @@ export default [
         director: 'Jaume Collet-Serra',
         year: '2021',
         category: 'Movie',
-        rating: '6.6'
+        rating: 6.6
     },
 
     {
@@ -20,7 +20,7 @@ export default [
         director: 'Pol Marshall',
         year: '2023',
         category: 'Movie',
-        rating: '7.1'
+        rating: 7.1
     },
 
     {
@@ -32,7 +32,7 @@ export default [
         director: 'Victor Marshall',
         year: '2022',
         category: 'Movie',
-        rating: '5.6'
+        rating: 5.6
     },
     {
         id: "4",
@@ -42,7 +42,7 @@ export default [
         director: 'George Lucas',
         year: '1977',
         imageUrl: 'https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg',
-        rating: '10',
+        rating: 10,
         description: "R2-D2 plays Leia's full message, in which she begs Obi-Wan to take the Death Star plans to Alderaan and give them to her father, a fellow veteran, for analysis. Luke initially declines Obi-Wan's offer to accompany him to Alderaan "
     }
 ]
