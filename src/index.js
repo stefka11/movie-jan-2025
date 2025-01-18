@@ -12,6 +12,7 @@ app.set('views', './src/views');  //указваме къде се намира 
 
 //app.use(express.static('src/public')); //статичните файлове да са достъпни
 app.use('/static', express.static('src/public')); //ако започва с /static – тогава го търси в src/public
+app.use(express.urlencoded({extended: false}));  //задаване на express да парсва формата
 
 app.use(routes);  
 
