@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import movies from '../movies.js';
 
 const router = Router();
 
@@ -9,7 +10,7 @@ const router = Router();
 router.get ('/', (req, res) => {
     //res.send('It works!');
     //res.render('home', {layout: false});
-    res.render('home');
+    res.render('home', { movies });
 });
 
 router.get ('/about', (req, res) => {
