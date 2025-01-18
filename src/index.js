@@ -1,6 +1,6 @@
 import express from 'express';
 import handlebars from 'express-handlebars';
-import homeController from './controllers/home-controller.js';
+import routes from './routes.js';  
 
 const app = express();
 
@@ -13,12 +13,7 @@ app.set('views', './src/views');  //указваме къде се намира 
 //app.use(express.static('src/public')); //статичните файлове да са достъпни
 app.use('/static', express.static('src/public')); //ако започва с /static – тогава го търси в src/public
 
-app.use(homeController); 
-
-app.get ('*', (req, res) => {
-    res.render('404');
-});
-
+app.use(routes);  
 
 app.listen(5001, ()=> console.log('Server is listening at http://localhost:5001...'));
 
