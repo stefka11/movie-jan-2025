@@ -1,0 +1,21 @@
+{
+  "name": "movie-jan-2025",
+  "version": "1.0.0",
+  "description": "JS-back-end",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefka11/movie-jan-2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
