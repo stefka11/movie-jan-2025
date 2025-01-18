@@ -8,11 +8,11 @@ movieController.get('/create', (req, res) => {
 });
 
 movieController.post('/create', (req, res) => {
-    console.log('POST Movie');
-    
-    console.log(req.body);
-    
-    res.end();
+    //console.log('POST Movie');
+    const newMovie = req.body;
+    //console.log(req.body);
+    movieService.create(newMovie);
+    res.redirect('/');
 });
 
 movieController.get('/:movieId/details', (req, res) => {
