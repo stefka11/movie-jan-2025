@@ -9,7 +9,7 @@ movieController.get('/search', (req, res) => {
     //console.log(req.query);         //данни от формата след GET
     const filter = req.query;
     const movies = movieService.getAll(filter);  // в getAll слагаме филтър, ако има
-    res.render('search', { movies });
+    res.render('search', { movies, filter });
 });
 
 movieController.get('/create', (req, res) => {
