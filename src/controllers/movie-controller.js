@@ -4,7 +4,11 @@ import movieService from '../services/movie-service.js';
 const movieController = Router();
 
 movieController.get('/search', (req, res) => {
-    const movies = movieService.getAll();
+    //console.log(req.querparamsy);   //куери параметрите - id-то
+    //console.log(req.body);          //данни от формата след POST
+    //console.log(req.query);         //данни от формата след GET
+    const filter = req.query;
+    const movies = movieService.getAll(filter);  // в getAll слагаме филтър, ако има
     res.render('search', { movies });
 });
 
